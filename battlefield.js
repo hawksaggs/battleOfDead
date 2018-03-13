@@ -1,35 +1,82 @@
 var zombies = [{
-        x: 9.5,
-        y: 10.1
-    }, {
-        x: 50,
-        y: 2.8
-    },
-
-    {
-        x: 19.6,
-        y: 12.5
-    }, {
-        x: 22.3,
-        y: 10
+        "x": 16.6,
+        "y": 13.7
     },
     {
-        x: 23.8,
-        y: 28.5
-    }, {
-        x: 24,
-        y: 8.2
+        "x": 16.1,
+        "y": 15.7
     },
     {
-        x: 45.5,
-        y: 32.1
-    }, {
-        x: 2.3,
-        y: 5.5
+        "x": 15.9,
+        "y": 11.5
     },
     {
-        x: 13.7,
-        y: 16.3
+        "x": 16.5,
+        "y": 11.4
+    },
+    {
+        "x": 11.1,
+        "y": 14.3
+    },
+    {
+        "x": 11,
+        "y": 14.3
+    },
+    {
+        "x": 13.8,
+        "y": 15.5
+    },
+    {
+        "x": 18.5,
+        "y": 15.3
+    },
+    {
+        "x": 16.8,
+        "y": 7.6
+    },
+    {
+        "x": 14,
+        "y": 10.6
+    },
+    {
+        "x": 15,
+        "y": 10.7
+    },
+    {
+        "x": 14,
+        "y": 10.8
+    },
+    {
+        "x": 17.1,
+        "y": 14.5
+    },
+    {
+        "x": 13.6,
+        "y": 9.6
+    },
+    {
+        "x": 16.8,
+        "y": 9.1
+    },
+    {
+        "x": 19.7,
+        "y": 14.2
+    },
+    {
+        "x": 15.6,
+        "y": 11.5
+    },
+    {
+        "x": 14.8,
+        "y": 12.3
+    },
+    {
+        "x": 15.6,
+        "y": 9.5
+    },
+    {
+        "x": 15.6,
+        "y": 9.1
     }
 ];
 
@@ -58,11 +105,11 @@ function calculateDeadZombie(cordinates, minDistanceIndex) {
     var cordinate = cordinates[minDistanceIndex];
     var noOfDeadZombie = 0;
     for (let i = 0; i < cordinates.length; i++) {
-        if (calculateDistance(cordinate.x, cordinates[i].x, cordinate.y, cordinates[i].y) <= 5) {
+        if (calculateDistance(cordinate.x, cordinates[i].x, cordinate.y, cordinates[i].y) <= 2.5) {
             noOfDeadZombie += 1;
         }
     }
-    return noOfDeadZombie;
+    return noOfDeadZombie + 1;
 }
 //Calculate the distance between two points
 function calculateDistance(x1, x2, y1, y2) {
